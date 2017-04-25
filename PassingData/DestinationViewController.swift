@@ -11,6 +11,7 @@ import UIKit
 class DestinationViewController: UIViewController {
 
     @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var textField: UITextField!
     var text: String?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,9 @@ class DestinationViewController: UIViewController {
     @IBAction func dismissView(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        text =  textField.text ?? ""
+    }
   
     /*
     // MARK: - Navigation

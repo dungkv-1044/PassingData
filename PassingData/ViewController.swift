@@ -22,13 +22,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        textField.text = text 
-    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? DestinationViewController {
-            destinationVC.text = textField.text ?? "Nil"
+            let data = textField.text
+            destinationVC.text = data
         }
     }
     @IBAction func passingDataWithoutSegue(_ sender: Any) {
@@ -36,6 +34,13 @@ class ViewController: UIViewController {
         let destinationVC = storyboard.instantiateViewController(withIdentifier: "DestinationViewController") as! DestinationViewController
         destinationVC.text = textField.text ?? "Nil"
         self.present(destinationVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func unwind(for unwindSegue : UIStoryboardSegue) {
+        if let origin = unwindSegue.source as? DestinationViewController {
+            let text = origin.text
+            textField.text = text
+        }
     }
 
 }
