@@ -15,6 +15,7 @@
 		3CBCA3801EAEEA16001562F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CBCA37E1EAEEA16001562F6 /* LaunchScreen.storyboard */; };
 		3CBCA38B1EAEEA16001562F6 /* PassingDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBCA38A1EAEEA16001562F6 /* PassingDataTests.swift */; };
 		3CBCA3961EAEEA16001562F6 /* PassingDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBCA3951EAEEA16001562F6 /* PassingDataUITests.swift */; };
+		3CBCA3A41EAEEB83001562F6 /* DestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBCA3A31EAEEB83001562F6 /* DestinationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3CBCA3911EAEEA16001562F6 /* PassingDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PassingDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CBCA3951EAEEA16001562F6 /* PassingDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassingDataUITests.swift; sourceTree = "<group>"; };
 		3CBCA3971EAEEA16001562F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CBCA3A31EAEEB83001562F6 /* DestinationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				3CBCA3721EAEEA16001562F6 /* AppDelegate.swift */,
 				3CBCA3741EAEEA16001562F6 /* ViewController.swift */,
+				3CBCA3A31EAEEB83001562F6 /* DestinationViewController.swift */,
 				3CBCA3761EAEEA16001562F6 /* Main.storyboard */,
 				3CBCA37C1EAEEA16001562F6 /* Assets.xcassets */,
 				3CBCA37E1EAEEA16001562F6 /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 				3CBCA3751EAEEA16001562F6 /* ViewController.swift in Sources */,
 				3CBCA3731EAEEA16001562F6 /* AppDelegate.swift in Sources */,
 				3CBCA37B1EAEEA16001562F6 /* PassingData.xcdatamodeld in Sources */,
+				3CBCA3A41EAEEB83001562F6 /* DestinationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
