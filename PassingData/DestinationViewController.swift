@@ -8,11 +8,16 @@
 
 import UIKit
 
+protocol Delegate : NSObjectProtocol {
+    func doSomething(with data: String)
+}
+
 class DestinationViewController: UIViewController {
 
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     var text: String?
+    weak var delegate : Delegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         textLabel.text = text
@@ -25,10 +30,15 @@ class DestinationViewController: UIViewController {
     }
     
     @IBAction func dismissView(_ sender: Any) {
+        passDataBackwards()
         dismiss(animated: true, completion: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         text =  textField.text ?? ""
+    }
+    
+    func passDataBackwards() {
+        delegate?.doSomething(with: "Passing data with delegate.")
     }
   
     /*

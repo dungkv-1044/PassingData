@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         if let destinationVC = segue.destination as? DestinationViewController {
             let data = textField.text
             destinationVC.text = data
+            destinationVC.delegate = self
         }
     }
     @IBAction func passingDataWithoutSegue(_ sender: Any) {
@@ -43,5 +44,10 @@ class ViewController: UIViewController {
         }
     }
 
+}
+extension ViewController: Delegate {
+    func doSomething(with data: String) {
+        textField.text = data
+    }
 }
 
